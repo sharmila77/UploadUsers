@@ -1,0 +1,36 @@
+{{!
+    @template local_upload_users/user_lists
+}}
+
+{{{header}}}
+
+<section class="content admin-db-content">
+    <div class="container-fluid">
+        <div class="col-xs-12 col-md-12 user-database">
+            <h2>List of Users</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Email SentOn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#users}}
+                    <tr>
+                        <td>{{firstname}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{email}}</td>
+                        <td>{{timecreated}}</td>
+                    </tr>
+                    {{/users}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{{{footer}}}
